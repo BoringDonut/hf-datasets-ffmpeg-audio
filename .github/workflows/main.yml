@@ -31,8 +31,8 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get install -y ffmpeg
-        python -m pip librosa soundfile
-        python -m pip ${{ matrix.datasets }}
-    - name: Test with pytest
+        python -m pip install librosa soundfile
+        python -m pip install ${{ matrix.datasets }}
+    - name: Execute main.py
       run: |
         python main.py
