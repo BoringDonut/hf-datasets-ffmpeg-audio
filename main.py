@@ -16,6 +16,7 @@ def main():
 
     print(audio_dataset_wav[0])
     print(audio_dataset_amr[0])
+    assert audio_dataset_wav[0]["audio"]["sampling_rate"] == audio_dataset_amr[0]["audio"]["sampling_rate"]
 
 
 if __name__ == "__main__":
